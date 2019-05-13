@@ -48,6 +48,21 @@ client.startDiscovery().on('device-new', (device) => {
 
 Install the command line utility with `npm install -g tplink-smarthome-api`. Run `tplink-smarthome-api --help` for help.
 
+Run the command `tplink-smarthome-api search` to search for devices.
+
+Then you will get results like:
+
+    Searching...
+    startDiscovery({ discoveryInterval: 2000,
+    discoveryTimeout: 10000,
+    breakoutChildren: false })
+    HS105(US) plug IOT.SMARTPLUGSWITCH 192.168.0.22 9999 D80D17SSSBC6 8006F7B02D4636952SSF7E10F4E10CC61B28FBE6 my1stplug
+
+Then run command 'tplink-smarthome-api setPowerState 192.168.0.22:9999 "true"' to turn on switch.
+
+Then run command 'tplink-smarthome-api setPowerState 192.168.0.22:9999 "false"' to turn off switch.
+
+
 ## API
 
 [Full API docs can be found here.](https://github.com/plasticrake/tplink-smarthome-api/blob/master/API.md)
